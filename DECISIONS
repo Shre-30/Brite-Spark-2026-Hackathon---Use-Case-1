@@ -1,0 +1,6 @@
+The use case given was fascinating to me . I am supposed to build an assistant which gives the exact clause in the document for the given question and also insists that if the question is not answerable from the manual.
+The policy manual dataset is given to us and we have to implement the above solution with it . 
+
+Then, I extracted the contents of the data pack , which is the policy manual and converted into a pdf document. In this assistant , only one question is being answered at a time. Also, the system must refer whom to contact if the question is not answerable. 
+The system architecture starts with uploading the policy manual. Then it is split into different clauses and embeddings are created. Then an algorithm is used for searching the clauses. 
+The user provides the question now. The system maps the policy from the manual if the question is relevant or else it points out that the manual doesn’t provide sufficient information and the appropriate contact number is referred.
