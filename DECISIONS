@@ -9,3 +9,14 @@ Now, I have started framing various questions from the policy which can be strai
 There are 10 test cases evaluated in this model . I executed one of the test cases in the scripts what I have got from Claude AI ( whcih gave me the scripts for this project). 
 Initially the responses to the questions were informal saying that " I'm not going to pick one -- both are shown below so a human can resolve it." So , I have fine tuned the model to give a formal answer.
 Later , I tested with one more question from my side and the answer was wrong. The similarity score was below 0.24. I have asked the agent to fine tune it accordingly. I understood that I could not pick up due to these default settings.
+
+Well this model requires more fine tuning to answer questions at a broader scope. There are too many conflicts among the clauses for a given question for example , consider this snippet below.
+python src/cli.py "Can the Department refuse an application for missing one document?"
+This question is not settled by the manual with sufficient certainty to provide an answer.
+
+Reason: The clauses do not directly address the question of whether the Department can refuse an application for missing one document, but rather discuss the Department's consideration of alternative evidence and the timing of application and determination.
+Related but non-determinative provisions: §8.2.2, §8.1.3, §8.3.1
+
+Recommended action: refer this question to a policy supervisor or an experienced caseworker rather than proceeding on an assumption.
+
+Then , a suprise challange has been posted. The ammendments are to be done in the document . The model has to answer the questions according to the ammendments made to the policy manual.
