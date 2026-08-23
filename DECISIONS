@@ -4,3 +4,5 @@ The policy manual dataset is given to us and we have to implement the above solu
 Then, I extracted the contents of the data pack , which is the policy manual and converted into a pdf document. In this assistant , only one question is being answered at a time. Also, the system must refer whom to contact if the question is not answerable. 
 The system architecture starts with uploading the policy manual. Then it is split into different clauses and embeddings are created. Then an algorithm is used for searching the clauses. 
 The user provides the question now. The system maps the policy from the manual if the question is relevant or else it points out that the manual doesn’t provide sufficient information and the appropriate contact number is referred.
+
+Now, I have started framing various questions from the policy which can be straightforward , or a real life scenario or the questions which cannot be answered from this manual. 
