@@ -6,4 +6,6 @@ The system architecture starts with uploading the policy manual. Then it is spli
 The user provides the question now. The system maps the policy from the manual if the question is relevant or else it points out that the manual doesn’t provide sufficient information and the appropriate contact number is referred.
 
 Now, I have started framing various questions from the policy which can be straightforward , or a real life scenario or the questions which cannot be answered from this manual.
-There are 10 test cases evaluated in this model .
+There are 10 test cases evaluated in this model . I executed one of the test cases in the scripts what I have got from Claude AI ( whcih gave me the scripts for this project). 
+Initially the responses to the questions were informal saying that " I'm not going to pick one -- both are shown below so a human can resolve it." So , I have fine tuned the model to give a formal answer.
+Later , I tested with one more question from my side and the answer was wrong. The similarity score was below 0.24. I have asked the agent to fine tune it accordingly. I understood that I could not pick up due to these default settings.
