@@ -5,4 +5,5 @@ Then, I extracted the contents of the data pack , which is the policy manual and
 The system architecture starts with uploading the policy manual. Then it is split into different clauses and embeddings are created. Then an algorithm is used for searching the clauses. 
 The user provides the question now. The system maps the policy from the manual if the question is relevant or else it points out that the manual doesn’t provide sufficient information and the appropriate contact number is referred.
 
-Now, I have started framing various questions from the policy which can be straightforward , or a real life scenario or the questions which cannot be answered from this manual. 
+Now, I have started framing various questions from the policy which can be straightforward , or a real life scenario or the questions which cannot be answered from this manual.
+There are 10 test cases evaluated in this model .
