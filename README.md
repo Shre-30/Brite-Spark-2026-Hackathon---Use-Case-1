@@ -121,3 +121,10 @@ Writes `tests/amendment_results_before.txt` and `tests/amendment_results_after.t
 
 - TF-IDF is lexical, not semantic — weaker on heavily paraphrased questions.
 - No date-aware reasoning — Amendment 2026-01's transitional provision requires comparing dates, which this pipeline doesn't handle.
+
+## Clone this repo
+
+```bash
+git clone 
+cd YOUR-REPO-NAME
+```
