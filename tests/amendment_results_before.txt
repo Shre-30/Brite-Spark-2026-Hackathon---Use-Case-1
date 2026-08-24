@@ -1,0 +1,70 @@
+Amendment 2026-01 test run -- label: before -- 2026-08-24T06:41:07.509322
+
+================================================================================
+A1  targets: Â§6.4.1(a)
+Q: What is the disregard for household earnings from employment?
+expected (before): $120 per month
+--------------------------------------------------------------------------------
+The disregard for household earnings from employment is $120 per month [§6.4.1(a)]. This disregard applies once per household, not once per earner [§6.4.2].
+
+================================================================================
+A2  targets: Â§4.3.2 vs Â§9.1.4
+Q: How many days does a recipient have to report a change of circumstances?
+expected (before): CONFLICT flag: 10 days (Â§4.3.2) vs 30 days (Â§9.1.4)
+--------------------------------------------------------------------------------
+A recipient must report any change in household composition, income, address, or the circumstances of any household member within **10 calendar days** of the change occurring, or within 10 calendar days of the recipient becoming aware of the change, whichever is later [§4.3.2].
+
+================================================================================
+A3  targets: Â§6.6.1 table
+Q: What is the income threshold for a household of 3?
+expected (before): $2,000
+--------------------------------------------------------------------------------
+The income threshold for a household of 3 is $2,000 [§6.6.1]. This is the applicable threshold for a household of that size.
+
+================================================================================
+A4  targets: Â§10.5.2
+Q: What is the reduction percentage for a first sanction?
+expected (before): 20 per cent
+--------------------------------------------------------------------------------
+The manual contains conflicting provisions on this question. No single answer can be given without resolving the discrepancy; both provisions are set out below.
+
+Nature of the conflict: §10.5.2 states that a sanction can be imposed for a period of 4 weeks for a first sanction, but §10.5.3 states that a sanction must not be imposed if the recipient has been assessed as requiring assistance with two or more activities of daily living, which would likely exempt a household with a dependent child under the age of 2.
+
+[§10.5.2] A sanction is a reduction of the monthly award by 20 per cent for a period of
+4 weeks for a first sanction, or 8 weeks for a subsequent sanction within 12 months.
+
+[§10.5.3] A sanction must not be imposed where the household includes a dependent
+child under the age of 2, or where the recipient has been assessed as requiring
+assistance with two or more activities of daily living.
+
+Recommended action: refer this question to a policy supervisor for clarification. Neither provision should be relied upon in isolation until the conflict is resolved.
+
+================================================================================
+A5  targets: new Â§10.5.3A
+Q: Can a sanction be imposed for failing to report a change that would have increased the award?
+expected (before): Likely refuse or an incomplete answer -- no such carve-out exists yet
+--------------------------------------------------------------------------------
+The manual contains conflicting provisions on this question. No single answer can be given without resolving the discrepancy; both provisions are set out below.
+
+Nature of the conflict: §10.5.1 allows for a sanction to be imposed for failing to report a change of circumstances, but §10.5.3 states that a sanction must not be imposed if the recipient has a dependent child under 2 or requires assistance with two or more activities of daily living, which could be considered a change of circumstances.
+
+[§10.5.1] The Department may impose a sanction where a recipient, without good
+cause —
+(a) fails to report a change of circumstances within the period required by §4.3.2;
+(b) fails to attend an interview required under §8.5; or
+(c) fails to comply with a condition attached to the award.
+
+[§10.5.3] A sanction must not be imposed where the household includes a dependent
+child under the age of 2, or where the recipient has been assessed as requiring
+assistance with two or more activities of daily living.
+
+Recommended action: refer this question to a policy supervisor for clarification. Neither provision should be relied upon in isolation until the conflict is resolved.
+
+================================================================================
+A6  targets: Â§5.2 transitional provision
+Q: If a change of circumstances occurred in February 2026 but the case is decided in March 2026, how many days did the recipient have to report it?
+expected (before): Refuse -- amendment/transitional logic doesn't exist in the corpus yet
+--------------------------------------------------------------------------------
+A recipient must report any change in household composition, income, address, or the circumstances of any household member within **10 calendar days** of the change occurring, or within 10 calendar days of the recipient becoming aware of the change, whichever is later [§4.3.2]. 
+
+In this case, the change of circumstances occurred in February 2026, and the case is being decided in March 2026. Therefore, the recipient had 10 calendar days from the date of the change to report it, or 10 calendar days from the date they became aware of the change, whichever is later [§4.3.2].

@@ -1,0 +1,102 @@
+Amendment 2026-01 test run -- label: after -- 2026-08-24T06:48:55.250074
+
+================================================================================
+A1  targets: Â§6.4.1(a)
+Q: What is the disregard for household earnings from employment?
+expected (after): $175 per month
+--------------------------------------------------------------------------------
+The disregard for household earnings from employment is $175 per month, as specified in [§6.4.1(a)]. This amount is disregarded once per household, as stated in [§6.4.2].
+
+================================================================================
+A2  targets: Â§4.3.2 vs Â§9.1.4
+Q: How many days does a recipient have to report a change of circumstances?
+expected (after): Should answer cleanly: 14 days, both clauses now agree -- the amendment resolves the contradiction
+--------------------------------------------------------------------------------
+A recipient must report any change in household composition, income, address, or the circumstances of any household member within **14 calendar days** of the change occurring, or within 14 calendar days of the recipient becoming aware of the change, whichever is later [§4.3.2].
+
+================================================================================
+A3  targets: Â§6.6.1 table
+Q: What is the income threshold for a household of 3?
+expected (after): $2,075
+--------------------------------------------------------------------------------
+The manual contains conflicting provisions on this question. No single answer can be given without resolving the discrepancy; both provisions are set out below.
+
+Nature of the conflict: §6.6.1 states that a household is not eligible if countable income exceeds the applicable threshold, while §2.1.2(c) states that the person must have countable income not exceeding the applicable threshold under Part 6. These two clauses directly contradict each other, as they both address the same condition for eligibility.
+
+[§6.6.1] A household is not eligible where countable income exceeds the applicable
+threshold. The thresholds are —
+
+| Household size | Monthly threshold |
+|:--|:--|
+| 1 | $1,225 |
+| 2 | $1,650 |
+| 3 | $2,075 |
+| 4 | $2,500 |
+| 5 | $2,925 |
+| each additional member | + $425 |
+
+*(Table as amended by Amendment 2026-01, effective 1 March 2026. Previous figures: 1=$1,180, 2=$1,590, 3=$2,000, 4=$2,410, 5=$2,820, each additional=+$410.)*
+
+[§2.1.2] The conditions are that the person —
+(a) is resident in Calder County and satisfies Part 3;
+(b) is aged 18 or over, or satisfies §2.3;
+(c) has countable income not exceeding the applicable threshold under Part 6;
+(d) has countable resources not exceeding the limit in §2.4;
+(e) is not excluded under Part 4; and
+(f) has made a valid application under Part 8.
+
+Recommended action: refer this question to a policy supervisor for clarification. Neither provision should be relied upon in isolation until the conflict is resolved.
+
+================================================================================
+A4  targets: Â§10.5.2
+Q: What is the reduction percentage for a first sanction?
+expected (after): 15 per cent
+--------------------------------------------------------------------------------
+The manual contains conflicting provisions on this question. No single answer can be given without resolving the discrepancy; both provisions are set out below.
+
+Nature of the conflict: §10.5.1 allows a sanction to be imposed for failing to report a change of circumstances, while §10.5.3A specifically states that a sanction must not be imposed in such a case, unless the change would have increased the award.
+
+[§10.5.1] The Department may impose a sanction where a recipient, without good
+cause —
+(a) fails to report a change of circumstances within the period required by §4.3.2;
+(b) fails to attend an interview required under §8.5; or
+(c) fails to comply with a condition attached to the award.
+
+[§10.5.3A] A sanction must not be imposed in respect of a failure to report where the change of circumstances in question would have increased the award. *(inserted by Amendment 2026-01, effective 1 March 2026)*
+
+Recommended action: refer this question to a policy supervisor for clarification. Neither provision should be relied upon in isolation until the conflict is resolved.
+
+================================================================================
+A5  targets: new Â§10.5.3A
+Q: Can a sanction be imposed for failing to report a change that would have increased the award?
+expected (after): Should answer: no, per new Â§10.5.3A
+--------------------------------------------------------------------------------
+The manual contains conflicting provisions on this question. No single answer can be given without resolving the discrepancy; both provisions are set out below.
+
+Nature of the conflict: §10.5.3A states that a sanction must not be imposed if the change of circumstances would have increased the award, while §10.5.3 states that a sanction must not be imposed if the household includes a dependent child under 2 or if the recipient requires assistance with two or more activities of daily living. However, §10.5.3A does not provide an exception for dependent children or assistance with activities of daily living, suggesting that a sanction could be imposed in these cases if the change of circumstances would have increased the award, which contradicts §10.5.3.
+
+[§10.5.3A] A sanction must not be imposed in respect of a failure to report where the change of circumstances in question would have increased the award. *(inserted by Amendment 2026-01, effective 1 March 2026)*
+
+[§10.5.3] A sanction must not be imposed where the household includes a dependent
+child under the age of 2, or where the recipient has been assessed as requiring
+assistance with two or more activities of daily living.
+
+Recommended action: refer this question to a policy supervisor for clarification. Neither provision should be relied upon in isolation until the conflict is resolved.
+
+================================================================================
+A6  targets: Â§5.2 transitional provision
+Q: If a change of circumstances occurred in February 2026 but the case is decided in March 2026, how many days did the recipient have to report it?
+expected (after): Correct answer requires date-aware reasoning (old 10-day period still applies, since the change predates 1 March 2026, regardless of decision date) -- this is the hardest case and may still fail even after the amendment is applied, since the pipeline has no date-comparison logic built in
+--------------------------------------------------------------------------------
+The manual contains conflicting provisions on this question. No single answer can be given without resolving the discrepancy; both provisions are set out below.
+
+Nature of the conflict: §4.3.2 requires a recipient to report a change in circumstances within 14 calendar days, while §10.5.3A states that a sanction must not be imposed for failing to report a change that would have increased the award, implying that such a failure is not a valid reason for a sanction. These two clauses conflict because they have different consequences for failing to report a change that would increase the award.
+
+[§4.3.2] A recipient must report any change in household composition, income,
+address, or the circumstances of any household member within **14 calendar days**
+of the change occurring, or within 14 calendar days of the recipient becoming aware of
+the change, whichever is later. *(as amended by Amendment 2026-01, effective 1 March 2026 — previously 10 calendar days; see §5.2 of the amendment for changes of circumstance occurring before that date)*
+
+[§10.5.3A] A sanction must not be imposed in respect of a failure to report where the change of circumstances in question would have increased the award. *(inserted by Amendment 2026-01, effective 1 March 2026)*
+
+Recommended action: refer this question to a policy supervisor for clarification. Neither provision should be relied upon in isolation until the conflict is resolved.

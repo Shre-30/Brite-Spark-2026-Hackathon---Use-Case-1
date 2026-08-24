@@ -1,0 +1,71 @@
+[
+  {
+    "id": "T1",
+    "question": "How many days does a recipient have to report a change of circumstances?",
+    "expected": "flag_conflict",
+    "expected_clause": "§4.3.2 vs §9.1.4",
+    "note": "THE CONTRADICTION. §4.3.2 states the requirement is 10 calendar days. §9.1.4 refers to \"the 30 calendar days required under §4.3\" for the same obligation. System should surface both clauses and the discrepancy, not silently pick one number."
+  },
+  {
+    "id": "T2",
+    "question": "If a recipient reports a change of circumstances on time, can the Department still create an overpayment for the period before they acted on it?",
+    "expected": "flag_conflict",
+    "expected_clause": "§4.3.2 vs §9.1.4",
+    "note": "Same contradiction from a different angle — depends on which reporting deadline is 'on time'. Tests whether retrieval finds the conflict regardless of phrasing."
+  },
+  {
+    "id": "T3",
+    "question": "How is the needs figure adjusted for a household member who is a full-time student?",
+    "expected": "refuse",
+    "expected_clause": "§7.1.3 (points to §5.4, which does not cover this)",
+    "note": "THE GAP. §7.1.3 says students are an exception \"(see §5.4)\" but §5.4 is entirely about care allowances. §1.4.6 defines 'full-time student' but the definition is never operationalized anywhere in the needs/award calculation. Should refuse, not guess an amount."
+  },
+  {
+    "id": "T4",
+    "question": "How is a temporary absence for full-time education treated for residence purposes?",
+    "expected": "refuse",
+    "expected_clause": "§3.2.3 / §5.2.3 (both say 'addressed separately' -- never are)",
+    "note": "Second angle on the same gap. Two different clauses (§3.2.3, §5.2.3) explicitly defer this to be 'addressed separately' -- but no such provision exists anywhere in the manual. A naive retriever will confidently return §3.2.3/§5.2.3 as if they answer the question."
+  },
+  {
+    "id": "T5",
+    "question": "What is the resource limit for a household to remain eligible?",
+    "expected": "answer",
+    "expected_clause": "§2.4.1",
+    "note": "Straightforward, single clear figure ($4,000)."
+  },
+  {
+    "id": "T6",
+    "question": "Is a household member who is temporarily in a care facility still counted as part of the household?",
+    "expected": "answer",
+    "expected_clause": "§4.2.1, §4.2.2, §5.1.1, §5.1.2",
+    "note": "Requires combining several related clauses correctly: still counted for the first 56 days (temporary), no longer counted once permanent, award recalculated only from the permanence date."
+  },
+  {
+    "id": "T7",
+    "question": "Can the Department refuse an application just because the applicant couldn't provide a specific document?",
+    "expected": "answer",
+    "expected_clause": "§8.2.2",
+    "note": "Straightforward, explicit prohibition."
+  },
+  {
+    "id": "T8",
+    "question": "What is the maximum amount a household can be reimbursed for childcare costs?",
+    "expected": "refuse",
+    "note": "Clean out-of-scope bait: childcare reimbursement isn't addressed anywhere in the manual -- checks the system doesn't invent a dollar figure from adjacent-sounding provisions."
+  },
+  {
+    "id": "T9",
+    "question": "How long does someone have to lodge an appeal after a review outcome?",
+    "expected": "answer",
+    "expected_clause": "§12.1.2",
+    "note": "Straightforward, single number (30 days)."
+  },
+  {
+    "id": "T10",
+    "question": "My case has been open for 4 months with no decision and no one's told me why -- is that allowed?",
+    "expected": "answer",
+    "expected_clause": "§8.3.1, §8.3.2, §8.3.3",
+    "note": "Adversarial/casual phrasing of a real, answerable question -- tests retrieval robustness to non-manual phrasing (30-day determination limit, notice requirement, 90-day supervisor referral)."
+  }
+]

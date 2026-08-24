@@ -1,0 +1,44 @@
+[
+  {
+    "id": "A1",
+    "question": "What is the disregard for household earnings from employment?",
+    "targets": "§6.4.1(a)",
+    "before_expected": "$120 per month",
+    "after_expected": "$175 per month"
+  },
+  {
+    "id": "A2",
+    "question": "How many days does a recipient have to report a change of circumstances?",
+    "targets": "§4.3.2 vs §9.1.4",
+    "before_expected": "CONFLICT flag: 10 days (§4.3.2) vs 30 days (§9.1.4)",
+    "after_expected": "Should answer cleanly: 14 days, both clauses now agree -- the amendment resolves the contradiction"
+  },
+  {
+    "id": "A3",
+    "question": "What is the income threshold for a household of 3?",
+    "targets": "§6.6.1 table",
+    "before_expected": "$2,000",
+    "after_expected": "$2,075"
+  },
+  {
+    "id": "A4",
+    "question": "What is the reduction percentage for a first sanction?",
+    "targets": "§10.5.2",
+    "before_expected": "20 per cent",
+    "after_expected": "15 per cent"
+  },
+  {
+    "id": "A5",
+    "question": "Can a sanction be imposed for failing to report a change that would have increased the award?",
+    "targets": "new §10.5.3A",
+    "before_expected": "Likely refuse or an incomplete answer -- no such carve-out exists yet",
+    "after_expected": "Should answer: no, per new §10.5.3A"
+  },
+  {
+    "id": "A6",
+    "question": "If a change of circumstances occurred in February 2026 but the case is decided in March 2026, how many days did the recipient have to report it?",
+    "targets": "§5.2 transitional provision",
+    "before_expected": "Refuse -- amendment/transitional logic doesn't exist in the corpus yet",
+    "after_expected": "Correct answer requires date-aware reasoning (old 10-day period still applies, since the change predates 1 March 2026, regardless of decision date) -- this is the hardest case and may still fail even after the amendment is applied, since the pipeline has no date-comparison logic built in"
+  }
+]
