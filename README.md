@@ -1,37 +1,123 @@
-# Project Name
- This is an AI assistant which helps in answering the questions from the policy manual . It will point out the clause which provides for the given question (i.e particular section of the policy).
- If the question is not answerable, it provides the contact person to be referred to sort out the query asked by the user.
+# The Grounded Answer
+An assistant that answers policy questions from the Calder County Household
+Support Program manual, cites the exact clause it used, refuses when the
+manual doesn't settle the question, and flags it explicitly when the
+manual contradicts itself.
+
+Includes a full before/after comparison against Amendment No. 2026-01,
+kept as two entirely separate pipelines so neither corpus ever overwrites
+the other.
 
 ---
+## System Architecture
 
-## Features
+```mermaid
+flowchart LR
 
-- **Feature 1:** High-level summary of capability.
-- **Feature 2:** Real-time data processing or API integration.
-- **Feature 3:** Built-in authentication or automated workflows.
+    subgraph INPUT["1. INPUT"]
+        A["User Question"]
+    end
 
----
+    subgraph RETRIEVAL["2. RETRIEVAL"]
+        B["Text Preprocessing"]
+        C["TF-IDF"]
+        D["Cosine Similarity"]
+        E["Porter Stemming"]
+        F["Clause / Sub-item Index"]
+        G["Top-K Retrieved Clauses"]
+    end
 
-## Tech Stack
+    subgraph SAFETY["3. GROUNDING & SAFETY"]
+        H["Conflict Check"]
+        I{"Conflict?"}
+        J["Refusal Gate"]
+        K["Similarity Floor"]
+        L["LLM Sufficiency Check"]
+    end
 
-- **Language:** Python 3.11 
-- **Framework:** Ollama LLM , 
-- **Database:** PostgreSQL / MySQL / Redis
-- **DevOps/CI:** Docker / GitHub Actions
+    subgraph GENERATION["4. ANSWER GENERATION"]
+        M["answer.py"]
+        N["LLM"]
+        O["Retrieved Clauses ONLY"]
+        P["Inline [§X.X.X] Citations"]
+    end
 
----
+    subgraph VALIDATION["5. VALIDATION"]
+        Q["Citation Check"]
+        R{"Citation Exists in Retrieved Context?"}
+        S["Final Answer"]
+        T["Refuse + Who to Ask"]
+        U["Show Both Clauses + Supervisor"]
+        V["Regenerate / Reject"]
+    end
 
-## Getting Started
+    A --> B
+    B --> C
+    B --> D
+    B --> E
+    B --> F
 
-### Prerequisites
+    C --> G
+    D --> G
+    E --> G
+    F --> G
 
-Ensure you have the following installed locally:
-- Python >= 3.10
-- Git
+    G --> H
+    H --> I
 
-### Installation
+    I -- "YES" --> U
+    I -- "NO" --> J
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/username/project-name.git](https://github.com/username/project-name.git)
-   cd project-name
+    J --> K
+    J --> L
+
+    K --> J
+    L --> J
+
+    J -- "INSUFFICIENT" --> T
+    J -- "SUFFICIENT" --> M
+
+    M --> N
+    N --> O
+    O --> P
+    P --> Q
+    Q --> R
+
+    R -- "NO" --> V
+    V --> M
+
+    R -- "YES" --> S
+```
+
+
+Retrieval is plain TF-IDF + cosine similarity computed in memory with
+scikit-learn -- no vector database, no persistent index, no server.
+
+## Setup
+
+1. Install Ollama: https://ollama.com, then `ollama pull llama3.1:8b`
+2. Install Python dependencies: `pip install -r requirements.txt`
+
+## Running the main submission
+
+```bash
+python src/chunk.py
+python src/retriever.py
+python src/cli.py "What is the resource limit for a household to remain eligible?"
+python tests/run_tests.py > tests/RESULTS.txt
+```
+
+## Running the before/after amendment comparison
+
+```bash
+python src/chunk_before.py
+python src/chunk_after.py
+python tests/run_before_after.py
+```
+
+Writes `tests/amendment_results_before.txt` and `tests/amendment_results_after.txt`.
+
+## Known limitations
+
+- TF-IDF is lexical, not semantic — weaker on heavily paraphrased questions.
+- No date-aware reasoning — Amendment 2026-01's transitional provision requires comparing dates, which this pipeline doesn't handle.
