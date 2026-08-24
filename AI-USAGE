@@ -3,3 +3,4 @@ In this project , I have mentioned below about the AI disclosure.
  2) Then , I got the code snippets by assisting the same model to obtain the answers for the questions.
  3) There was an amendment in the document, I took the help of the AI assistant and wrote comparison scripts  to obtain the  answers for the questions provided before and after the amendment of policy documents.
  4) The AI model used in this project is Sonnet 5.
+ 5) The architecture diagram was drawn using the mermaid tool with help of ChatGPT tool.
