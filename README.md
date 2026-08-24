@@ -125,6 +125,6 @@ Writes `tests/amendment_results_before.txt` and `tests/amendment_results_after.t
 ## Clone this repo
 
 ```bash
-git clone 
-cd YOUR-REPO-NAME
+git clone https://github.com/Shre-30/Brite-Spark-2026-Hackathon---Use-Case-1.git
+cd Brite-Spark-2026-Hackathon---Use-Case-1
 ```
